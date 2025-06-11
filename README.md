@@ -1,10 +1,9 @@
-# Broken Record Store API SOLUTION✅
+# Record Store API SOLUTION✅
 
 
 # Enhancing Search Performance & Scalability  
 
 ## ✅ Optimized Solution:  
-To address these issues, I implemented the following improvements:  
 - **MongoDB Query Filters:** Directly applied query filters in the `find()` method to optimize data retrieval.  
 - **Indexing:** Added indexes on `artist`, `album`, `category`, and `format` to speed up searches.  
 - **Pagination:** Implemented `limit` and `skip` to efficiently handle large datasets, reducing unnecessary memory consumption.  

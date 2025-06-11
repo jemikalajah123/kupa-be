@@ -16,7 +16,9 @@ export class RecordController {
   @ApiOperation({ summary: 'Create a new record' })
   @ApiResponse({ status: 201, description: 'Record successfully created' })
   @ApiResponse({ status: 400, description: 'Bad Request' })
-  async createRecord(@Body() request: CreateRecordRequestDTO): Promise<IApiResponse> {
+  async createRecord(
+    @Body() request: CreateRecordRequestDTO,
+  ): Promise<IApiResponse> {
     return this.recordService.createRecord(request);
   }
 
@@ -100,7 +102,11 @@ export class RecordController {
 
   @Get(':id')
   @ApiOperation({ summary: 'Get a record by ID' })
-  @ApiResponse({ status: 200, description: 'Record found successfully', type: Record })
+  @ApiResponse({
+    status: 200,
+    description: 'Record found successfully',
+    type: Record,
+  })
   @ApiResponse({ status: 404, description: 'Record not found' })
   async getRecordById(@Param('id') id: string): Promise<IApiResponse> {
     return this.recordService.getRecordById(id);
